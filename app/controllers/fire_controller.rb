@@ -29,16 +29,15 @@ class FireController < ApplicationController
   end
 
   def archer
-    horoscope = "The high from your recent successes could make you want to purchase luxury items that you used to think were impractical, Sagittarius. This is fine as long as you're discriminating and don't give in to impulse buying. This also isn't a good time to overindulge in food or drink. You should let yourself enjoy your success while still using common sense."
+    @horoscope = "The high from your recent successes could make you want to purchase luxury items that you used to think were impractical, Sagittarius. This is fine as long as you're discriminating and don't give in to impulse buying. This also isn't a good time to overindulge in food or drink. You should let yourself enjoy your success while still using common sense."
     
     @array_of_numbers = Array.new
 
     5.times do
       another_number = rand(1...100)
-      
       @array_of_numbers.push(another_number)
     end
 
-    render({ :template => "fire_interface/sagitarrius.html.erb" })
+    render({ :template => "flame_interface/sagittarius.html.erb" })
   end
 end
